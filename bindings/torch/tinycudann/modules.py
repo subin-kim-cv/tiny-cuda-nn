@@ -198,7 +198,7 @@ class Encoding(Module):
 		may yield higher numerical accuracy, but is generally slower.
 		A value of `torch.half` may not be supported on all systems.
 	"""
-	def __init__(self, n_input_dims, encoding_config, seed=1337, dtype=None):
+	def __init__(self, n_input_dims, encoding_config, seed=1337, dtype=torch.float32):
 		self.n_input_dims = n_input_dims
 		self.encoding_config = encoding_config
 		if dtype is None:
