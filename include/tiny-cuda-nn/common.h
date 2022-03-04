@@ -49,7 +49,8 @@ TCNN_NAMESPACE_BEGIN
 
 static constexpr uint32_t MIN_GPU_ARCH = TCNN_MIN_GPU_ARCH;
 
-#define TCNN_HALF_PRECISION (!(TCNN_MIN_GPU_ARCH == 61 || TCNN_MIN_GPU_ARCH <= 52))
+// #define TCNN_HALF_PRECISION (!(TCNN_MIN_GPU_ARCH == 61 || TCNN_MIN_GPU_ARCH <= 52))
+#define TCNN_HALF_PRECISION 0
 
 // TCNN has the following behavior depending on GPU arch.
 // Refer to the first row of the table at the following URL for information about
