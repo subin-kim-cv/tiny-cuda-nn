@@ -127,7 +127,7 @@ These bindings can be significantly faster than full Python implementations; in 
 
 Begin by setting up a Python 3.X environment with a recent, CUDA-enabled version of PyTorch. Then, invoke
 ```sh
-pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+pip install git+https://github.com/subinKim14/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
 
 Alternatively, if you would like to install from a local clone of __tiny-cuda-nn__, invoke
