@@ -88,6 +88,7 @@ __device__ uint32_t fast_hash(const uint32_t pos_grid[N_DIMS]) {
 	#pragma unroll
 	for (uint32_t i = 0; i < N_DIMS; ++i) {
 		result ^= pos_grid[i] * primes[i];
+		std::cout << primes[i] << std::endl;
 	}
 
 	return result;
