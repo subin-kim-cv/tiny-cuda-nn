@@ -84,13 +84,12 @@ __device__ uint32_t fast_hash(const uint32_t pos_grid[N_DIMS]) {
 	// and is sufficient for our use case of obtaining a uniformly colliding index from high-dimensional
 	// coordinates.
 	// 1, 2654435761, 805459861, 3674653429, 2097192037, 1434869437, 2165219737
-	constexpr uint32_t primes[7] = { 10, 100, 3674653429, 2097192037, 1434869437, 2165219737, 1 };
+	constexpr uint32_t primes[7] = { 1, 2654435761, 805459861, 3674653429, 2097192037, 1434869437, 2165219737};
 
 	uint32_t result = 0;
 	#pragma unroll
 	for (uint32_t i = 0; i < N_DIMS; ++i) {
 		result ^= pos_grid[i] * primes[i];
-		std::cout << primes[i] << std::endl;
 	}
 
 	return result;
