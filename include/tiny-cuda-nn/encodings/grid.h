@@ -829,7 +829,7 @@ public:
 		set_params(params, inference_params, backward_params, gradients);
 
 		// Initialize the hashgrid from the GPU, because the number of parameters can be quite large.
-		generate_random_uniform<float>(rnd, n_params(), params_full_precision, -(1/3)f, (1/3)f);
+		generate_random_uniform<float>(rnd, n_params(), params_full_precision, -0.3333333f, 0.3333333f);
 	}
 
 	size_t n_params() const override {
