@@ -571,7 +571,7 @@ public:
 			uint32_t params_in_level = std::pow((float)resolution, N_POS_DIMS) > (float)max_params ? max_params : powi(resolution, N_POS_DIMS);
 
 			// Make sure memory accesses will be aligned
-			params_in_level = next_multiple(params_in_level, 2u);
+			params_in_level = next_multiple(params_in_level, 1u);
 
 			if (grid_type == GridType::Dense) {
 				// No-op
